@@ -5,5 +5,5 @@ import { Render } from "@measured/puck";
 import config from "@config/page.config";
 
 export function Client({ data }: { data: Data }) {
-  return <Render config={config} data={data} />;
+  return <Render config={config} data={data} />
 }
