@@ -1,11 +1,15 @@
-import { Config } from "@measured/puck";
+import type { Config } from "@measured/puck";
+import type { TextProps } from "@components/Text";
+import { textConfig } from "@components/Text";
 
-type Props = {}
+type FooterProps = {
+  Text: TextProps;
+};
 
-export const footerConfig: Config<Props> = {
-    components: {
-
-    }
-}
+const footerConfig: Config<FooterProps> = {
+  components: {
+    Text: textConfig,
+  },
+};
 
 export default footerConfig;
