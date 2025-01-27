@@ -33,7 +33,7 @@ export const flexConfig: ComponentConfig<FlexProps> = {
           min: 0,
         },
       },
-      getItemSummary: (_, id = -1) => `Item ${id + 1}`,
+      
     },
     minItemWidth: {
       label: "Minimum Item Width",

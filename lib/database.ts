@@ -41,5 +41,5 @@ export async function saveFooter(data: Data, path: String) {
   const db = await getDatabase();
   db.footer = data; 
   await fs.writeFile("database.json", JSON.stringify(db, null, 2));
-  await revalidatePath("/footer"); 
+  revalidatePath("/footer"); 
 }

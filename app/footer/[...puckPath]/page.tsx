@@ -22,7 +22,6 @@ export async function generateMetadata({
   params: { puckPath: string[] };
 }): Promise<Metadata> {
   const path = `/${puckPath.join("/")}`;
-
   return {
     title: "Puck: " + path,
   };
@@ -36,7 +35,7 @@ export default async function Page({
   const path = `/${puckPath.join("/")}`;
   const data = await getPage(path);
 
-  return <Client path={path} data={data || {}} />;
+  return <Client path={path} data={data} />;
 }
 
 export const dynamic = "force-dynamic";
