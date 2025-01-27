@@ -5,13 +5,13 @@ import { Puck } from "@measured/puck";
 import config from "@config/page.config";
 import { saveFooter } from "@lib/database";
 
-export function Client({ data }: { data: Partial<Data> }) {
+export function Client({ path, data }: { data: Partial<Data>, path: string }) {
   return (
     <Puck
       config={config}
       data={data}
       onPublish={async (data) => {
-        await saveFooter(data);
+        await saveFooter(data, path);
       }}
     />
   );

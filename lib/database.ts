@@ -37,7 +37,7 @@ export async function getFooter(): Promise<Data | undefined> {
   return db.footer;
 }
 
-export async function saveFooter(data: Data) {
+export async function saveFooter(data: Data, path: String) {
   const db = await getDatabase();
   db.footer = data; 
   await fs.writeFile("database.json", JSON.stringify(db, null, 2));
